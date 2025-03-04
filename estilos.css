@@ -1,0 +1,82 @@
+/* 🎨 Fondo con gradiente rosado */
+body {
+    background: radial-gradient(circle, #ffc0cb, #ff69b4, #ffb6c1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Gagalin', sans-serif; /* 🔹 Fuente GAGALIN */
+    text-align: center;
+    overflow: hidden; /* Evita el scroll si las decoraciones se salen */
+    position: relative;
+}
+
+/* 🔹 Contenedor de las decoraciones */
+#decoraciones {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1; /* Para que las decoraciones queden en el fondo */
+}
+
+/* 🔹 Estilo para las decoraciones (ahora más grandes) */
+.decoracion {
+    position: absolute;
+    width: 550px; /* ⬆️ Puedes cambiar este valor para hacerlas más grandes o pequeñas */
+    opacity: 0.6; /* 🔹 Un poco de transparencia para que se mezclen mejor */
+}
+
+/* 🔹 Texto principal */
+h1 {
+    font-size: 2.5rem; /* ⬆️ Puedes aumentar este valor para que sea más grande */
+    color: #ff0080;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* 🔹 Mensaje inicial */
+.mensaje {
+    font-size: 2.5rem; /* ⬆️ Aquí puedes cambiar el tamaño del texto "HOLIIIS LEYDI" */
+    font-weight: bold;
+    color: #ff0080;
+    margin-bottom: 20px;
+}
+
+/* 🔹 Contenido principal */
+.contenido {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* 🔹 Animación de aparición */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* 🔹 Imágenes */
+.imagen-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.Leydi {
+    width: 150px; /* 🔹 Puedes cambiar el tamaño de la imagen de la chica */
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.pastel {
+    width: 200px; /* 🔹 Puedes cambiar el tamaño de la torta */
+}
+
+.nutria {
+    width: 120px; /* 🔹 Puedes cambiar el tamaño de la nutria */
+}

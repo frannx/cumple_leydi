@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LEY ♡</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Gagalin&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Contenedor para las decoraciones -->
+    <div id="decoraciones"></div>
+
+    <!-- Mensaje inicial -->
+    <div id="mensaje" class="mensaje">
+        HOLIIIS ♡  
+        <div class="imagen-container">
+            <img src="imagenes\nutria.png" alt="Nutria pequeña" class="nutria">
+        </div>
+    </div>
+
+    <!-- Contenido principal -->
+    <div id="contenido" class="contenido">
+        <h1>♡ FELIZ CUMPLEAÑOS <br> LEYDI ♡</h1>
+        <div class="imagen-container">
+            <img src="imagenes\torta.webp" alt="Pastel de Cumpleaños" class="pastel">
+            <img src="imagenes\imagen_leydi.JPG" alt="Feliz Cumpleaños Leydi" class="Leydi">
+        </div>
+    </div>
+
+    <script>
+        // Generar decoraciones aleatorias
+        function generarDecoraciones() {
+            const decoracionesContainer = document.getElementById("decoraciones");
+            const cantidad = 12; // Más decoraciones
+            const imagenes = ["imagenes/dec01.webp", "imagenes/dec02.png"]; 
+
+            for (let i = 0; i < cantidad; i++) {
+                let img = document.createElement("img");
+                img.src = imagenes[Math.floor(Math.random() * imagenes.length)];
+                img.classList.add("decoracion");
+                
+                // Posición aleatoria en la pantalla
+                img.style.top = Math.random() * 100 + "vh";
+                img.style.left = Math.random() * 100 + "vw";
+                img.style.transform = `rotate(${Math.random() * 360}deg)`;
+
+                decoracionesContainer.appendChild(img);
+            }
+        }
+
+        // Ocultar mensaje inicial después de 3 segundos
+        setTimeout(() => {
+            document.getElementById("mensaje").style.display = "none";
+            document.getElementById("contenido").style.display = "flex";
+        }, 3000);
+
+        generarDecoraciones();
+    </script>
+</body>
+</html>
